@@ -1,2 +1,247 @@
-Adventure Awaits
+"Adventure Awaits!"
 
+total_rewards = []
+
+def display_list(list:list):
+
+    index = 0
+
+    while (index < len(list)):
+        record = list[index]
+        message = record + "\n"
+        sys.stdout.write(message)
+        index += 1
+
+def select_reward(type:str)
+    sys.stdout.write(type + " of __ (Enter " + type + " type): " ) 
+            reward = type + " of " + Get sword_response
+            rewards.append(reward)
+            total_rewards.append(reward)
+
+def error_message(choice:str)
+    sys.stdout.write(name + has entered an invalid response for " + choice + " choice and has missed out on any rewards from this section.") 
+
+def end_game()->str
+    sys.stdout.write("Would you like to go on another adventure " + name + "? (Enter yes or no)") 
+    
+    reply = Get reply
+
+    if (reply == "yes" or "Yes" or "Y" or "y")
+        reply_out = "yes"
+    
+    return reply_out
+
+
+sys.stdout.write("ASCII art image") 
+
+sys.stdout.write("Welcome! Please enter your name: ") 
+
+name = Get name
+
+sys.stdout.write("Hello " + name + "! Let's begin your adventure.") 
+
+response = "yes"
+
+while (response == "yes" or "Yes" or "Y" or "y")
+
+    rewards = []
+
+    sys.stdout.write("You're walking down a dirt path in the woods when you come to a fork in the road. Which direction do you go? (Enter left or right): ") 
+    direction = sys.stdin.readline().strip
+
+    if (direction == "left" or "Left" or "L" or "l")
+        sys.stdout.write("The forest opens up into a clearing with two chests marked 1 and 2. Which chest do you open? (Enter 1 or 2): ") 
+
+        selection = int(sys.stdin.readline().strip)
+
+        if (selection == 1)
+            sys.stdout.write("The chest contained a " + select_reward("Sword")) 
+
+        elif (selction == 2)
+            sys.stdout.write("The chest contained a " + select_reward("Shield")) 
+        else
+            sys.stdout.write(error_message("chest")) 
+
+    elif (direction == "right" or "Right" or "R" or "r")
+        sys.stdout.write("The path leads you to a castle containing two doors marked 1 and 2. Which door do you open? (Enter 1 or 2): ") 
+
+        selection = int(sys.stdin.readline().strip)
+
+        if (selection == 1)
+            sys.stdout.write("The door opens to a blacksmith containing an " + select_reward("Armour")) 
+
+        elif (selction == 2)
+            sys.stdout.write("The door opens to a jewelers containing an " + select_reward("Armour")) 
+
+        else
+            error_message("door")
+    else 
+        sys.stdout.write() "error_message(direction)"
+
+    sys.stdout.write("As you contininue on your adventure you come across a weary fellow adventurer. They ask you if you can share some of your water with them. How much of your water do you decide to share? (Enter a percentage as a fraction e.g. 0.25 = 25%, 0.5 = 50% 1.0 = 100%): ") 
+
+    water_shared = float(sys.stdin.readline().strip)
+    water_percentage = water_shared * 100
+
+    if (water_shared >= 0 and < 0.5)
+        sys.stdout.write() "You chose to share " + water_percentage + " of your water. The adventurer turns out to be a powerful wizard! As a punishment for you're greedy ways he casts upon you the "  + select_reward("Curse")
+
+    elif (water_shared >= 0.5 and <= 1)
+        sys.stdout.write() "You chose to share " + water_percentage + " of your water. The adventurer turns out to be a powerful wizard! As a reward for you're genorous ways he casts upon you the + select_reward("Blessing")
+    else
+        sys.stdout.write() "error_message("water amount)"
+
+    sys.stdout.write() "The adventurer " + name + " returns home, having completed their adventure. The rewards gained on this adventure were:\n\n"
+
+    display_list(rewards)
+
+    response = end_game()
+
+sys.stdout.write() "Thank you for playing " + name ". Your total rewards were:\n\n" 
+display_list(total_rewards)
+                                                                    
+*********************************************************************
+                                                                    
+          /\
+         /**\
+        /****\   /\
+       /      \ /**\
+      /  /\    /    \        /\    /\  /\      /\            /\/\/\  /\
+     /  /  \  /      \      /  \/\/  \/  \  /\/  \/\  /\  /\/ / /  \/  \
+    /  /    \/ /\     \    /    \ \  /    \/ /   /  \/  \/  \  /    \   \
+   /  /      \/  \/\   \  /      \    /   /    \
+__/__/_______/___/__\___\__________________________________________________
+                                                                    
+****************************************************************************
+                                                                    
+                            _.--.
+                        _.-'_:-'||
+                    _.-'_.-::::'||
+               _.-:'_.-::::::'  ||
+             .'`-.-:::::::'     ||
+            /.'`;|:::::::'      ||_
+           ||   ||::::::'     _.;._'-._
+           ||   ||:::::'  _.-!oo @.!-._'-.
+           \'.  ||:::::.-!()oo @!()@.-'_.|
+            '.'-;|:.-'.&$@.& ()$%-'o.'\U||
+              `>'-.!@%()@'@_%-'_.-o _.|'||
+               ||-._'-.@.-'_.-' _.-o  |'||
+               ||=[ '-._.-\U/.-'    o |'||
+               || '-.]=|| |'|      o  |'||
+               ||      || |'|        _| ';
+               ||      || |'|    _.-'_.-'
+               |'-._   || |'|_.-'_.-'
+                '-._'-.|| |' `_.-'
+                    '-.||_/.-'
+
+                                                                    
+*********************************************************************
+                                                                    
+                      .
+                     / \
+                     | |
+                     | |
+                     |.|
+                     |.|
+                     |:|
+                     |:|
+                   `--8--'
+                      8
+                      O
+                                                                    
+*********************************************************************
+                                                                    
+                 |`-._/\_.-`|
+                 |    ||    |
+                 |___o()o___|
+                 |__((<>))__|
+                 \   o\/o   /
+                  \   ||   /
+                   \  ||  /
+                    '.||.'
+                      ``
+ ********************************************************************************                                                                   
+********************************************************************************
+                                                                    
+                                  |>>>
+                                  |
+                    |>>>      _  _|_  _         |>>>
+                    |        |;| |;| |;|        |
+                _  _|_  _    \\.    .  /    _  _|_  _
+               |;|_|;|_|;|    \\:. ,  /    |;|_|;|_|;|
+               \\..      /    ||;   . |    \\.    .  /
+                \\.  ,  /     ||:  .  |     \\:  .  /
+                 ||:   |_   _ ||_ . _ | _   _||:   |
+                 ||:  .|||_|;|_|;|_|;|_|;|_|;||:.  |
+                 ||:   ||.    .     .      . ||:  .|
+                 ||: . || .     . .   .  ,   ||:   |       \,/
+                 ||:   ||:  ,  _______   .   ||: , |            /`\
+                 ||:   || .   /+++++++\    . ||:   |
+                 ||:   ||.    |+++++++| .    ||: . |
+              __ ||: . ||: ,  |+++++++|.  . _||_   |
+     ____--`~    '--~~__|.    |+++++__|----~    ~`---,              ___
+-~--~                   ~---__|,--~'                  ~~----_____-~'   `~----~~
+                                                                    
+*********************************************************************
+                                                                    
+                      {}
+                     .--.
+                    /.--.\
+                    |====|
+                    |`::`|
+                .-;`\..../`;-.
+               /  |...::...|  \
+              |   /'''::'''\   |
+              ;--'\   ::   /\--;
+              <__>,>._::_.<,<__>
+              |  |/   ^^   \|  |
+              \::/|        |\::/
+              |||\|        |/|||
+              ''' |___/\___| '''
+                   \_ || _/
+                   <_ >< _>
+                   |  ||  |
+                   |  ||  |
+                  _\.:||:./_
+                 /____/\____\
+                                                                    
+*********************************************************************
+                                                                    
+                     ,-==-,
+                     \/\/\/
+                      \\//
+                    .--''--.
+                  .'.--::--.'.
+                 / /        \ \
+                | |          | |   
+                 \ \        / / 
+                  '.'--::--'.' 
+                    '--__--'
+                                                                    
+*********************************************************************
+                                                                    
+                         ______
+                       .'* *.' 
+                    __/_*_*(_
+                   / _______ \
+                  _\_)/___\(_/_ 
+                 / _((\O 0/))_ \ 
+                 \ \())(-)(()/ /
+                  ' \(((()))/ '
+                 / ' \)).))/ ' \ 
+                / _ \ - | - /_  \ 
+               (   ( .;''';. .'  )
+               _\"__ /    )\ __"/_
+                 \/  \   ' /  \/
+                  .'  '...' ' )
+                   / /  |  \ \ 
+                  / .   .   . \ 
+                 /   .     .   \ 
+                /   /   |   \   \ 
+             .'   /    b    '.  '.
+         _.-'    /     Bb     '-. '-._ 
+     _.-'       |      BBb       '-.  '-. 
+    (___________\____.dBBBb.________)____)
+                                                                    
+*********************************************************************
+                                                                    
