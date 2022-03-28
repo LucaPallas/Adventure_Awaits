@@ -1,29 +1,23 @@
 import sys
 
-# Used 'rewards' as a plural of the variable 'reward' which are added into the list. Alternative could have been 'item/items' but as there are also Curses and Blessings, so that didn't fit as well.
-rewards = []
-
-# Used 'totsl_rewards' as it holds all the rewards the user collects before deciding to no longer continue their adventure. Alternative could have been 'item/tota;_items' but as there are also Curses and Blessings, so that didn't fit as well.
-total_rewards = []
-
-# Used 'format' as it accurately describes what the contained constants do. Alternatives could be 'style' or 'font'.
-# Used a class to contain all the relevant formating strings to make adding colours or styles to string outputs easier without having to remeber the string values and repeating code.
-class format:
-
-  # Used constants as these should not change throught the code and used the colour/format names as easiest to use. 'END' could alternatively be called 'CLEAR'.
-  DARKCYAN = "\033[36m"
-  PURPLE = "\033[95m"
-  BLUE = "\033[94m"
-  RED = "\033[91m"
-  YELLOW = "\033[93m"
-  GREEN = "\033[92m"
-  BOLD = "\033[1m"
-  UNDERLINE = "\033[4m"
-  END = "\033[0m"
-
 # Used the name 'ascii_wizard' rather than just 'wizard' to more accurately describe what the function is about.
 # Used a function to do this as there are two places the ascii_art wizard would have been placed so by doing it as a function it reduces repeated code.
 def ascii_wizard():
+
+    # Used 'format' as it accurately describes what the contained constants do. Alternatives could be 'style' or 'font'.
+    # Used a class to contain all the relevant formating strings to make adding colours or styles to string outputs easier without having to remeber the string values and repeating code.
+    class format:
+
+    # Used constants as these should not change throught the code and used the colour/format names as easiest to use. 'END' could alternatively be called 'CLEAR'.
+        DARKCYAN = "\033[36m"
+        PURPLE = "\033[95m"
+        BLUE = "\033[94m"
+        RED = "\033[91m"
+        YELLOW = "\033[93m"
+        GREEN = "\033[92m"
+        BOLD = "\033[1m"
+        UNDERLINE = "\033[4m"
+        END = "\033[0m"
 
     # Used 'ascii_art' instead of 'message' as it hold strings specifically relating to the ascii art required in the project, rather than a general string text.
     ascii_art = format.PURPLE
@@ -58,6 +52,21 @@ def ascii_wizard():
 # Used as a function to reduce code repeat when wanting to display the contents of a list/lists.
 def display_list(list:list):
 
+    # Used 'format' as it accurately describes what the contained constants do. Alternatives could be 'style' or 'font'.
+    # Used a class to contain all the relevant formating strings to make adding colours or styles to string outputs easier without having to remeber the string values and repeating code.
+    class format:
+
+    # Used constants as these should not change throught the code and used the colour/format names as easiest to use. 'END' could alternatively be called 'CLEAR'.
+        DARKCYAN = "\033[36m"
+        PURPLE = "\033[95m"
+        BLUE = "\033[94m"
+        RED = "\033[91m"
+        YELLOW = "\033[93m"
+        GREEN = "\033[92m"
+        BOLD = "\033[1m"
+        UNDERLINE = "\033[4m"
+        END = "\033[0m"
+
     # Used 'index' as it is the list's index that the number is referencing. An alternative could be 'i' but it's not as informative.
     index = 0
 
@@ -77,9 +86,11 @@ def display_list(list:list):
         sys.stdout.write(message)
         index += 1
 
+    
+
 # Used 'select_reward' as the user gets to pick what type of reward they are getting e.g. Sword of Fire or Curse of Slow. An alternative name could be 'get_item_name', but that doesn't work as well for the Curses/Blessings.
 # Used this as a function to reduce repeated code and increase reusability, as it allows for the program to be expanded to include more reward types through the 'type' parameter (.g. Necklace, Axe etc). This could have been called something more specific like 'weapon' but then would not allow for rewards such as armor or curses accurately. This function also allows the user to input the descriptor (e.g. Sword of 'Fire'), after which the full reward name is added to both the 'rewards' and 'total_rewards' lists, all while avoiding repeated code.
-def select_reward(message_in:str, type:str):
+def select_reward(message_in:str, type:str, rewards:list, total_rewards:list):
 
     # Used 'message' rather than 'output' to make it a bit more descriptive of what the output is, which is a message to the user.
     message = message_in
@@ -101,6 +112,8 @@ def select_reward(message_in:str, type:str):
 
     # Used to add string held in 'reward' to list 'total_rewards'.
     total_rewards.append(reward)
+
+    return rewards, total_rewards
 
 # Used 'error_message' as it accurately describes the meaning of the function. 'display_error' would be a possible alternative.
 # Used a function as error/exception handling was outside of the projects scope, so by providing a message letting the user know why they have missed out on a section due to incorrect input is the best alternative to doing so. 
@@ -149,6 +162,28 @@ def end_game(name:str)->str:
 
 # Used 'main' as even though not a requirement for the main function to be called 'main' in Python, it generally is in other langages and wanted to keep with that convention.
 def main():
+
+    # Used 'rewards' as a plural of the variable 'reward' which are added into the list. Alternative could have been 'item/items' but as there are also Curses and Blessings, so that didn't fit as well.
+    rewards = []
+
+    # Used 'totsl_rewards' as it holds all the rewards the user collects before deciding to no longer continue their adventure. Alternative could have been 'item/tota;_items' but as there are also Curses and Blessings, so that didn't fit as well.
+    total_rewards = []
+
+    # Used 'format' as it accurately describes what the contained constants do. Alternatives could be 'style' or 'font'.
+    # Used a class to contain all the relevant formating strings to make adding colours or styles to string outputs easier without having to remeber the string values and repeating code.
+    class format:
+
+    # Used constants as these should not change throught the code and used the colour/format names as easiest to use. 'END' could alternatively be called 'CLEAR'.
+        DARKCYAN = "\033[36m"
+        PURPLE = "\033[95m"
+        BLUE = "\033[94m"
+        RED = "\033[91m"
+        YELLOW = "\033[93m"
+        GREEN = "\033[92m"
+        BOLD = "\033[1m"
+        UNDERLINE = "\033[4m"
+        END = "\033[0m"
+
 
     # Used 'ascii_art' instead of 'message' as it hold strings specifically relating to the ascii art required in the project, rather than general string text. 
     ascii_art = format.BOLD
@@ -290,7 +325,7 @@ def main():
                 message += "\n\nThe chest contained a "
 
                 # Used 'select_reward' as the user gets to pick what type of reward they are getting e.g. Sword of Fire or Curse of Slow. An alternative name could be 'get_item_name', but that doesn't work as well for the Curses/Blessings.
-                select_reward(message, "Sword") 
+                select_reward(message, "Sword", rewards, total_rewards) 
 
             # Used an 'if-elif-else' statement as it is the easiest way to determine which selection choice the user whiches to make. The other alternative of a 'while' loop doesn't really work as this funtion already exists within a 'while' loop and we don't need it to repeat at least once.
             # Used 'if  (selection == 2)' as it makes more sense to have 2 be the second condition option rather than using 2 first, though that would still work as an alternative.
@@ -319,7 +354,7 @@ def main():
                 message += "\n\nThe chest contained a "
 
                 # Used 'select_reward' as the user gets to pick what type of reward they are getting e.g. Sword of Fire or Curse of Slow. An alternative name could be 'get_item_name', but that doesn't work as well for the Curses/Blessings.
-                select_reward(message, "Shield")
+                select_reward(message, "Shield", rewards, total_rewards)
 
             # Used this to call error_message() for any input other than the ones used in the 'if-elif' statements, as it is a basic way to control the flow in cases where the user inputs an invalid string.
             else:
@@ -407,7 +442,7 @@ def main():
                 message += "\n\nThe door opens to a blacksmith containing an "
 
                 # Used 'select_reward' as the user gets to pick what type of reward they are getting e.g. Sword of Fire or Curse of Slow. An alternative name could be 'get_item_name', but that doesn't work as well for the Curses/Blessings.
-                select_reward(message, "Armour") 
+                select_reward(message, "Armour", rewards, total_rewards) 
 
             # Used an 'if-elif-else' statement as it is the easiest way to determine which selection choice the user whiches to make. The other alternative of a 'while' loop doesn't really work as this funtion already exists within a 'while' loop and we don't need it to repeat at least once.
             # Used 'if  (selection == 2)' as it makes more sense to have 2 be the second condition option rather than using 2 first, though that would still work as an alternative.
@@ -437,7 +472,7 @@ def main():
                 message += "\n\nThe door opens to a jewelers containing an "
 
                 # Used 'select_reward' as the user gets to pick what type of reward they are getting e.g. Sword of Fire or Curse of Slow. An alternative name could be 'get_item_name', but that doesn't work as well for the Curses/Blessings.
-                select_reward(message, "Ring")
+                select_reward(message, "Ring", rewards, total_rewards)
 
             # Used this to call error_message() for any input other than the ones used in the 'if-elif' statements, as it is a basic way to control the flow in cases where the user inputs an invalid string.
             else:
@@ -481,7 +516,7 @@ def main():
             message += "the "
 
             # Used 'select_reward' as the user gets to pick what type of reward they are getting e.g. Sword of Fire or Curse of Slow. An alternative name could be 'get_item_name', but that doesn't work as well for the Curses/Blessings.
-            select_reward(message, "Curse")
+            select_reward(message, "Curse", rewards, total_rewards)
 
 
         # Used an 'if-elif-else' statement as it is the easiest way to determine which selection choice the user whiches to make. The other alternative of a 'while' loop doesn't really work as this funtion already exists within a 'while' loop and we don't need it to repeat at least once.
@@ -500,7 +535,7 @@ def main():
             message += "the "
 
             # Used 'select_reward' as the user gets to pick what type of reward they are getting e.g. Sword of Fire or Curse of Slow. An alternative name could be 'get_item_name', but that doesn't work as well for the Curses/Blessings.
-            select_reward(message, "Blessing")
+            select_reward(message, "Blessing", rewards, total_rewards)
 
         # Used this to call error_message() for any input other than the ones used in the 'if-elif' statements, as it is a basic way to control the flow in cases where the user inputs an invalid string.
         else:
