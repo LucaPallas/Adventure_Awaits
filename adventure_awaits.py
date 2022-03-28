@@ -6,6 +6,7 @@ def ascii_wizard():
 
     # Used 'format' as it accurately describes what the contained constants do. Alternatives could be 'style' or 'font'.
     # Used a class to contain all the relevant formating strings to make adding colours or styles to string outputs easier without having to remeber the string values and repeating code.
+    # learnt from https://stackoverflow.com/questions/8924173/how-do-i-print-bold-text-in-python user Bouba
     class format:
 
     # Used constants as these should not change throught the code and used the colour/format names as easiest to use. 'END' could alternatively be called 'CLEAR'.
@@ -54,6 +55,7 @@ def display_list(list:list):
 
     # Used 'format' as it accurately describes what the contained constants do. Alternatives could be 'style' or 'font'.
     # Used a class to contain all the relevant formating strings to make adding colours or styles to string outputs easier without having to remeber the string values and repeating code.
+    # learnt from https://stackoverflow.com/questions/8924173/how-do-i-print-bold-text-in-python user Bouba
     class format:
 
     # Used constants as these should not change throught the code and used the colour/format names as easiest to use. 'END' could alternatively be called 'CLEAR'.
@@ -166,11 +168,12 @@ def main():
     # Used 'rewards' as a plural of the variable 'reward' which are added into the list. Alternative could have been 'item/items' but as there are also Curses and Blessings, so that didn't fit as well.
     rewards = []
 
-    # Used 'totsl_rewards' as it holds all the rewards the user collects before deciding to no longer continue their adventure. Alternative could have been 'item/tota;_items' but as there are also Curses and Blessings, so that didn't fit as well.
+    # Used 'total_rewards' as it holds all the rewards the user collects before deciding to no longer continue their adventure. Alternative could have been 'item/tota;_items' but as there are also Curses and Blessings, so that didn't fit as well.
     total_rewards = []
 
     # Used 'format' as it accurately describes what the contained constants do. Alternatives could be 'style' or 'font'.
     # Used a class to contain all the relevant formating strings to make adding colours or styles to string outputs easier without having to remeber the string values and repeating code.
+    # learnt from https://stackoverflow.com/questions/8924173/how-do-i-print-bold-text-in-python user Bouba
     class format:
 
     # Used constants as these should not change throught the code and used the colour/format names as easiest to use. 'END' could alternatively be called 'CLEAR'.
@@ -223,7 +226,7 @@ def main():
     # Used 'response' rather than 'reply' as the variable is containing the users response to the question asked, though 'reply' could also work.
     response = "yes"
 
-    # Used a 'while' loop as 'for' loop would both be not as fitting for the needed purpose and is also outside the scope for this project. An 'if-else' statement would work for the choice side of things but would only run once unless a set of repeated 'if-else' statements were put in, which would both be bad coding and still leave a set number of iterations, instead of an unlimited number llike the 'while' loop allows for.
+    # Used a 'while' loop as 'for' loop would both be not as fitting fas the amount of times the loop needs to be run is unknown and it is also outside the scope for this project. An 'if-else' statement would work for the choice side of things but would only run once unless a set of repeated 'if-else' statements were put in, which would both be bad coding and still leave a set number of iterations, instead of an unknown number like the 'while' loop allows for.
     # Used 'while (response == "yes")' as makes more sense to run the adventure code while the user says 'yes' than to run it while they aren't saying 'no', but the alternative of 'while (response != "no") would still technically work.
     while (response == "yes"):
 
